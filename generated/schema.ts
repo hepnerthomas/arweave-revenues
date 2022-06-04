@@ -253,13 +253,13 @@ export class Transaction extends Entity {
     this.set("id", Value.fromString(value));
   }
 
-  get block(): Bytes {
+  get block(): string {
     let value = this.get("block");
-    return value!.toBytes();
+    return value!.toString();
   }
 
-  set block(value: Bytes) {
-    this.set("block", Value.fromBytes(value));
+  set block(value: string) {
+    this.set("block", Value.fromString(value));
   }
 
   get tx_id(): Bytes {
